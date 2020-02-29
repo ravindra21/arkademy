@@ -27,7 +27,7 @@ Edit Product
 Add Product
 ![Add Produk](https://user-images.githubusercontent.com/26089535/75607251-b236a800-5b27-11ea-983d-820ab79eb487.png)
 Delete Product
-![Delete Produk](https://user-images.githubusercontent.com/26089535/75607254-b95db600-5b27-11ea-9ba4-89b8dd441a29.png)
+![Delete Produk](https://user-images.githubusercontent.com/26089535/75607408-6684fe00-5b29-11ea-83a8-20cd3a63d7eb.png)
 
 SOAL 6C
 List Product
