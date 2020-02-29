@@ -7,7 +7,8 @@ semua soal no 1 - 5 bisa dibuka di es6console.com, tinggal copy paste kodenya.
 
 # Soal 6c
 - Npm Atau Yarn
-- Node JS
+- **Node JS 7 KEATAS**
+- MYSQL(Saya pakai MariaDB)
 - Web Browser (Chrome)
 
 # Menjalankan Aplikasi 6c
