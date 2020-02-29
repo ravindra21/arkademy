@@ -20,7 +20,7 @@ function is_password_valid(pwd){
     return false;
 };
 
-console.log(is_username_valid('6andi7'));//return false
-console.log(is_username_valid('1brah1'));//return true
-console.log(is_password_valid('andi-123'));//return false
-console.log(is_password_valid('1-2brah34'));//return true
+is_username_valid('6andi7');//return false
+is_username_valid('1brah1');//return true
+is_password_valid('andi-123');//return false
+is_password_valid('1-2brah34');//return true
