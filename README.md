@@ -1,3 +1,7 @@
+# Soal 1
+Kegunaan JSON pada restful api adalah untuk mentransfer data dari server ke klien yang merequest(biasanya menggunakan ajax)
+dan juga agar data lebih terstruktur dan biaya transfernya lebih kecil
+
 # Soal 1 - 5
 semua soal no 1 - 5 bisa dibuka di es6console.com, tinggal copy paste kodenya.
 
