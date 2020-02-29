@@ -2,8 +2,21 @@
 Kegunaan JSON pada restful api adalah untuk mentransfer data dari server ke klien yang merequest(biasanya menggunakan ajax)
 dan juga agar data lebih terstruktur dan biaya transfernya lebih kecil
 
+# Soal 2
+Soal 2 menggunakan regex di js untuk validasi username dan password
+
+# Soal 3
+Memakai perulangan, dan if else untuk membuat deret angka sampai hasilnya 1
+
+# Soal 4
+Memakai method Math.random untuk mencari bilangan prima 1-30 sebanyak input, lalu menjumlahkannya
+
+# Soal 5
+Membuat segitiga siku2 dengan tinggi sesuai dengan input yg diberikan
+
+
 # Soal 1 - 5
-semua soal no 1 - 5 bisa dibuka di es6console.com, tinggal copy paste kodenya.
+semua soal no 1 - 5 bisa dibuka di `es6console.com`, tinggal copy paste kodenya.
 
 # Soal 6c
 - Npm Atau Yarn
@@ -18,7 +31,7 @@ semua soal no 1 - 5 bisa dibuka di es6console.com, tinggal copy paste kodenya.
 - ketik `npm start` di terminal atau `yarn start`
 - buka browser, ketik alamat url localhost:3000
 
-# Screenshoot soal
+# Screenshoot soal 6A - 6C
 SOAL 6A
 
 
