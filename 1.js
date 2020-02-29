@@ -41,4 +41,4 @@ const Biodata = (name, age) => {
     }
 }
 
-console.log(Biodata('Ravindra Setya Alkahfi', 22));
+Biodata('Ravindra Setya Alkahfi', 22);
