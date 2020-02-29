@@ -22,4 +22,4 @@ function triangle(row){
     return arr.join('\n');
 }
 
-console.log(triangle(5));
+triangle(5);
