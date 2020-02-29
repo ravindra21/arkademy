@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  include navBar
+
+  .container
+    .row &nbsp;
+    .row
+      .col
+        .table-responsive
+          include tableOrder
+
+  include createModal
+  include editModal
+  include deleteModal

@@ -1,0 +1,13 @@
+
+#tableEmployees .btn-primary {
+  margin-right : 3px;
+	margin-bottom : 3px;
+}
+#tableEmployees .btn-danger{
+	/*width :	70px;*/
+	margin-left : 2px;
+	margin-bottom : 3px;
+}
+.modal-content{
+  margin-top : 60px;
+}

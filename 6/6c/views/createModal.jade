@@ -1,0 +1,19 @@
+block createModal
+  section#createModal.modal
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h3.modal-title ADD
+          button.close(data-dismiss='modal') &times;
+
+        .modal-body
+          form#createForm(action='/api', method='post')
+            .form-group
+              input.form-control(type='text' name='cashier', placeholder="Cashier")
+            .form-group
+              input.form-control(type='text', name='category', placeholder="Category")
+            .form-group
+              input.form-control(type='text', name='product', placeholder="Product")
+            .form-group
+              input.form-control(type='number', name='price', placeholder="Price")
+            button.btn.btn-warning.text-light(name='submit', value=1) Add

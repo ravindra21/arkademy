@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">
+				<img src="logo.png" width="80" height="30" alt="">
+			</a>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button href="#addTransaction" class="btn btn-warning text-white" data-toggle="modal" type="submit">Add</button>
+			</form>
+    </nav>
+      
+      <div class="container">
+        <table class="table table-borderless" border="1">
+            <thead>
+                <tr class="bg-warning text-white">
+                    <th>No</th>
+                    <th>Cashier</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pevita Pearce</td>
+                    <td>Latte</td>
+                    <td>Drink</td>
+                    <td>Rp.10.0000</td>
+                    <td>
+                        <a href="#editTransaction" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="#deleteTransaction" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Raisa Andriana</td>
+                    <td>Cake</td>
+                    <td>Food</td>
+                    <td>Rp.15.000</td>
+                    <td>
+                        <a href="#editTransaction" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="#deleteTransaction" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Raisa Andriana</td>
+                    <td>Fried Rice</td>
+                    <td>Food</td>
+                    <td>Rp.30.000</td>
+                    <td>
+                        <a href="#editTransaction" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="#deleteTransaction" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Pevita Pearce</td>
+                    <td>Gudeg</td>
+                    <td>Food</td>
+                    <td>Rp.35.000</td>
+                    <td>
+                        <a href="#editTransaction" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="#deleteTransaction" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Joko Purwadhi</td>
+                    <td>Ice Tea</td>
+                    <td>Drink</td>
+                    <td>Rp.35.000</td>
+                    <td>
+                        <a href="#editTransaction" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="#deleteTransaction" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                </tr>        
+                    <td>6</td>
+                    <td>Ravindra Setya Alkahfi</td>
+                    <td>Indomie</td>
+                    <td>Food</td>
+                    <td>Rp.15.000</td>
+                    <td>
+                        <a href="#editTransaction" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="#deleteTransaction" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                    </td>
+                </tr>        
+            </tbody>
+        </table>    
+      </div>
+
+      <div id="editTransaction" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">						
+						<h4 class="modal-title">EDIT</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">					
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Raisa Andriana">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Drink">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Ice Tea">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Rp.10.000">
+						</div>					
+					</div>
+					<div class="modal-footer">
+						<input type="submit" class="btn btn-warning text-white" value="EDIT">
+					</div>
+				</form>
+			</div>
+		</div>
+    </div>
+
+
+		<div id="addTransaction" class="modal fade">                                                 <div class="modal-dialog">                        <div class="modal-content">                       <form>                                            <div class="modal-header">                        <h4 class="modal-title">ADD</h4>               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                                                  </div>                                          <div class="modal-body">                          <div class="form-group">                          <input type="text" class="form-control" placeholder="Raisa Andriana">                         </div>                                          <div class="form-group">                          <input type="text" class="form-control" placeholder="Drink"></div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Ice Tea"></div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Rp.10.000"></div>
+				</div>
+				<div class="modal-footer">
+					<input type="submit" class="btn btn-warning text-white" value="ADD">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+	<div id="deleteTransaction" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">						
+						<h4 class="modal-title">Delete Employee</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">					
+						<p>Are you sure you want to delete these Records?</p>
+						<p class="text-warning"><small>This action cannot be undone.</small></p>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" class="btn btn-danger" value="Delete">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

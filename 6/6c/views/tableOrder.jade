@@ -1,0 +1,24 @@
+block tableOrder
+  table#tableOrders.table.table-striped()
+    thead.bg-warning.text-white
+      tr
+        th(scope='col') Cashier
+        th(scope='col') Product
+        th(scope='col') Category
+        th(scope='col') Price
+        th(scope='col') Actions
+    tbody
+      tr
+        td.align-middle.
+          Ravindra Setya Alkahfi
+        td.align-middle.
+          Indomie
+        td.align-middle.
+          Food
+        td.align-middle.
+          2000000
+        td.allign-middle
+          button#editBtn.btn.btn-primary(data-toggle = 'modal', data-target = '#editModal').
+            &#xE254;
+          button#deleteBtn.btn.btn-danger(data-toggle = 'modal', data-target = '#deleteModal').
+            &#xE872;
