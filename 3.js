@@ -16,6 +16,6 @@ function sequence(n){
     return "array : "+result.array+"  count : "+result.count;
 };
 
-console.log(sequence(13));
-console.log(sequence(3));
-console.log(sequence(-9));
+sequence(13);
+sequence(3);
+sequence(-9);
