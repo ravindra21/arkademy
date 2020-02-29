@@ -38,6 +38,7 @@ function showTable() {
 
 		$('#tableOrders > tbody').append(
 			$('<tr>').append(
+        $("<td class='align-middle'>").text(i+1),
 				$("<td class='align-middle'>").text(el.cashier),
 				$("<td class='align-middle'>").text(el.product),
 				$("<td class='align-middle'>").text(el.category),

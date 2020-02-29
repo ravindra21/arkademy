@@ -1,6 +1,6 @@
 -- MariaDB dump 10.17  Distrib 10.4.6-MariaDB, for Android (aarch64)
 --
--- Host: localhost    Database: pegawai
+-- Host: localhost    Database: caffe
 -- ------------------------------------------------------
 -- Server version	10.4.6-MariaDB
 
@@ -16,111 +16,108 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `name`
+-- Table structure for table `cashier`
 --
 
-DROP TABLE IF EXISTS `name`;
+DROP TABLE IF EXISTS `cashier`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `name` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `id_work` int(11) NOT NULL,
-  `id_salary` int(11) NOT NULL,
+CREATE TABLE `cashier` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_salary` (`id_salary`),
-  KEY `id_work` (`id_work`,`id_salary`),
-  CONSTRAINT `fk_salary` FOREIGN KEY (`id_salary`) REFERENCES `salary` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_work` FOREIGN KEY (`id_work`) REFERENCES `work` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `name_2` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `name`
+-- Dumping data for table `cashier`
 --
 
-LOCK TABLES `name` WRITE;
-/*!40000 ALTER TABLE `name` DISABLE KEYS */;
-INSERT INTO `name` VALUES (10,'Budi Prih Hast',2,2);
-/*!40000 ALTER TABLE `name` ENABLE KEYS */;
+LOCK TABLES `cashier` WRITE;
+/*!40000 ALTER TABLE `cashier` DISABLE KEYS */;
+INSERT INTO `cashier` VALUES (1,'Pevita Pearce'),(2,'Raisa Adriana'),(3,'Ravindra Setya Alkahfi');
+/*!40000 ALTER TABLE `cashier` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Temporary table structure for view `pegawai`
+-- Table structure for table `category`
 --
 
-DROP TABLE IF EXISTS `pegawai`;
-/*!50001 DROP VIEW IF EXISTS `pegawai`*/;
+DROP TABLE IF EXISTS `category`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `category` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `category`
+--
+
+LOCK TABLES `category` WRITE;
+/*!40000 ALTER TABLE `category` DISABLE KEYS */;
+INSERT INTO `category` VALUES (7,''),(2,'Drink'),(1,'Food');
+/*!40000 ALTER TABLE `category` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Temporary table structure for view `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!50001 DROP VIEW IF EXISTS `orders`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE TABLE `pegawai` (
-  `id` tinyint NOT NULL,
-  `name` tinyint NOT NULL,
-  `id_salary` tinyint NOT NULL,
-  `id_work` tinyint NOT NULL,
-  `wid` tinyint NOT NULL,
-  `work` tinyint NOT NULL,
-  `sid` tinyint NOT NULL,
-  `salary` tinyint NOT NULL
+/*!50001 CREATE TABLE `orders` (
+  `id_product` tinyint NOT NULL,
+  `id_category` tinyint NOT NULL,
+  `id_cashier` tinyint NOT NULL,
+  `cashier` tinyint NOT NULL,
+  `product` tinyint NOT NULL,
+  `category` tinyint NOT NULL,
+  `price` tinyint NOT NULL
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
 
 --
--- Table structure for table `salary`
+-- Table structure for table `product`
 --
 
-DROP TABLE IF EXISTS `salary`;
+DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `salary` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `salary` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `salary` (`salary`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
+CREATE TABLE `product` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `price` int(10) NOT NULL,
+  `id_category` int(10) NOT NULL,
+  `id_cashier` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `salary`
+-- Dumping data for table `product`
 --
 
-LOCK TABLES `salary` WRITE;
-/*!40000 ALTER TABLE `salary` DISABLE KEYS */;
-INSERT INTO `salary` VALUES (2,12000000);
-/*!40000 ALTER TABLE `salary` ENABLE KEYS */;
+LOCK TABLES `product` WRITE;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+INSERT INTO `product` VALUES (1,'Latte',10000,2,1),(6,'Indomie',20000,1,3);
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `work`
+-- Final view structure for view `orders`
 --
 
-DROP TABLE IF EXISTS `work`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `work` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `work`
---
-
-LOCK TABLES `work` WRITE;
-/*!40000 ALTER TABLE `work` DISABLE KEYS */;
-INSERT INTO `work` VALUES (2,'BackEnd Dev');
-/*!40000 ALTER TABLE `work` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Final view structure for view `pegawai`
---
-
-/*!50001 DROP TABLE IF EXISTS `pegawai`*/;
-/*!50001 DROP VIEW IF EXISTS `pegawai`*/;
+/*!50001 DROP TABLE IF EXISTS `orders`*/;
+/*!50001 DROP VIEW IF EXISTS `orders`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
@@ -129,7 +126,7 @@ UNLOCK TABLES;
 /*!50001 SET collation_connection      = latin1_swedish_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`u0_a138`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `pegawai` AS select `n`.`id` AS `id`,`n`.`name` AS `name`,`n`.`id_salary` AS `id_salary`,`n`.`id_work` AS `id_work`,`w`.`id` AS `wid`,`w`.`name` AS `work`,`s`.`id` AS `sid`,`s`.`salary` AS `salary` from ((`name` `n` join `work` `w` on(`n`.`id_work` = `w`.`id`)) join `salary` `s` on(`n`.`id_salary` = `s`.`id`)) */;
+/*!50001 VIEW `orders` AS select `p`.`id` AS `id_product`,`p`.`id_category` AS `id_category`,`p`.`id_cashier` AS `id_cashier`,`ca`.`name` AS `cashier`,`p`.`name` AS `product`,`c`.`name` AS `category`,`p`.`price` AS `price` from ((`product` `p` join `category` `c` on(`p`.`id_category` = `c`.`id`)) join `cashier` `ca` on(`p`.`id_cashier` = `ca`.`id`)) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -143,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-27 18:21:13
+-- Dump completed on 2020-02-29 19:37:03

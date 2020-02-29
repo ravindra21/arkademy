@@ -1,7 +1,7 @@
 let db = require('../db.js');
 var selectAll = 'SELECT * FROM orders';
 var select = 'SELECT * FROM orders where id = ?';
-var searchQuery = 'SELECT * FROM orders WHERE product = ? OR category = ? OR cashier = ? OR price = ?';
+var searchQuery = 'SELECT * FROM orders WHERE product LIKE ? OR category LIKE ? OR cashier LIKE ? OR price LIKE ?';
 var cashier =[
 	'INSERT IGNORE INTO cashier set name=?',
 	'SELECT id from cashier where name = ?'];
@@ -26,6 +26,7 @@ exports.getAll = () => {
 
 exports.get = (q) => {
   return new Promise(resolve => {
+		q = '%'+q+'%';
     db.query(searchQuery, [q,q,q,q], (e, row) => {
       if (e) throw e;
       return resolve(row);

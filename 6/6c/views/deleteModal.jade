@@ -5,6 +5,11 @@ block deleteModal
         .modal-header
           h5.modal-title Delete this record ?
           button.close(data-dismiss='modal') &times;
+        .modal-body
+          p apakah anda yakin ingin menghapus data ini ?
+          p.text-warning
+            small Data akan dihapus permanen
         .modal-footer
           form#deleteForm
-            button.btn.btn-danger Yes
+            button.btn.btn-default(data-dismiss="modal") Cancel
+            button.btn.btn-danger Delete
