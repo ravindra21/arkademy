@@ -31,7 +31,7 @@ semua soal no 1 - 5 bisa dibuka di `es6console.com`, tinggal copy paste kodenya.
 - ketik `npm start` di terminal atau `yarn start`
 - buka browser, ketik alamat url localhost:3000
 
-# Screenshoot soal 6A - 6C
+# Screenshoot soal 6A - 6C SaMa
 SOAL 6A
 
 
