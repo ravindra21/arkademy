@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-
+// konfogurasi database disini
 var config = {
   host : 'localhost',
   user : 'admin',
