@@ -13,4 +13,4 @@ function randomize(resLength){
     return "array : "+result.array+"  sum: "+result.sum;
 };
 
-console.log(randomize(5));
+randomize(5);
